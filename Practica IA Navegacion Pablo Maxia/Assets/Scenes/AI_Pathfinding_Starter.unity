@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 3
     agentTypeID: 0
-    agentRadius: 0.25
-    agentHeight: 2
+    agentRadius: 0.5
+    agentHeight: 0.5
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.083333336
+    cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
     buildHeightMesh: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 10b0ef6a81babe74297ce1fe0b4cebb5, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 197c325d818b558479ab4d4dd45412fa, type: 2}
 --- !u!1001 &2812826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26629,7 +26629,7 @@ MonoBehaviour:
   m_EndPoint: {x: 16, y: 3.25, z: -13}
   m_Width: 1
   m_CostModifier: -1
-  m_Bidirectional: 1
+  m_Bidirectional: 0
   m_AutoUpdatePosition: 0
   m_Area: 0
 --- !u!1001 &1198573085
@@ -43397,6 +43397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quart_Stairs_01_snaps002
       objectReference: {fileID: 0}
+    - target: {fileID: 1373214333290734, guid: dc3d2c5a3d4ce3e44be28b500526dc6e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4734514397559992, guid: dc3d2c5a3d4ce3e44be28b500526dc6e, type: 3}
       propertyPath: m_RootOrder
       value: 32
@@ -46634,6 +46638,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 237660789679828894, guid: 1d6e7443f29f80543afa1e2654b83665, type: 3}
       insertIndex: -1
       addedObject: {fileID: 237660789228633497}
+    - targetCorrespondingSourceObject: {fileID: 237660789679828894, guid: 1d6e7443f29f80543afa1e2654b83665, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 237660789228633498}
   m_SourcePrefab: {fileID: 100100000, guid: 1d6e7443f29f80543afa1e2654b83665, type: 3}
 --- !u!1 &237660789228633496 stripped
 GameObject:
@@ -46662,6 +46669,20 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &237660789228633498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237660789228633496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f465e2476125bb46b53c1351f061e6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  goal: {fileID: 0}
 --- !u!1001 &8181891043932316449
 PrefabInstance:
   m_ObjectHideFlags: 0
