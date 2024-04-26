@@ -4,28 +4,49 @@ using UnityEngine;
 
 public class MovimientoCamara : MonoBehaviour
 {
-    public Transform target;
-    public Vector3 offset;
-    // Start is called before the first frame update
+    public float tiempoFreno = 0.15f;
+    private Vector3 velocidad = Vector3.zero;
+    public Transform objetivo;
+
+    private Camera camara;
+    private float altura;
+    private float z;
+
     void Start()
     {
+        camara = GetComponent<Camera>();
 
+        altura = transform.position.y;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //RotarCamara();
-    }
-   
-    private void PosicionCamara()
-    {
-        transform.position = target.position + offset;
-    }
-    private void RotarCamara()
-    {
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); // Gets mouse position to Unity World coordinate system
-        Camera.main.transform.parent.transform.Rotate(mousePosition);
-    }
+        if (objetivo)
+        {
+            float profundidad = Vector3.Dot(
+                        objetivo.position - transform.position,
+                        transform.forward
+            );
 
+            Vector3 focoVista = new Vector3(0.5f, 0.5f, profundidad);
+            Vector3 focoMundo = camara.ViewportToWorldPoint(focoVista);
+
+            Vector3 delta = objetivo.position - focoMundo;
+            Vector3 destino = transform.position + delta;
+
+            if(transform.position.y > altura){
+                destino.y -= altura / 2;
+            }
+            else{
+                destino.y = altura;
+            }
+
+            transform.position = Vector3.SmoothDamp(
+                                    transform.position,
+                                    destino,
+                                    ref velocidad,
+                                    tiempoFreno
+            );
+        }
+    }
 }

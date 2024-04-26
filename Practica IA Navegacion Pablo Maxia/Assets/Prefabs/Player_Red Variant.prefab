@@ -107,7 +107,7 @@ NavMeshObstacle:
   m_Extents: {x: 0.5, y: 0.5, z: 0.5}
   m_MoveThreshold: 0
   m_Carve: 1
-  m_CarveOnlyStationary: 1
+  m_CarveOnlyStationary: 0
   m_Center: {x: 0, y: 0, z: 0}
   m_TimeToStationary: 0.5
 --- !u!95 &7455094055197078699
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2471797117469848140}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e13c0364f3b5d0459453a9e818acf23, type: 3}
+  m_Script: {fileID: 11500000, guid: 6be39eb8d19acf945b0720e9c344b09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 0}
