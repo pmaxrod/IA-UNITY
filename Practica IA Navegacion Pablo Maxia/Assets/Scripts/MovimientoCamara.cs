@@ -34,10 +34,12 @@ public class MovimientoCamara : MonoBehaviour
             Vector3 delta = objetivo.position - focoMundo;
             Vector3 destino = transform.position + delta;
 
-            if(transform.position.y > altura){
+            if(transform.position.y > altura)
+            {
                 destino.y -= altura / 2;
             }
-            else{
+            else
+            {
                 destino.y = altura;
             }
 
